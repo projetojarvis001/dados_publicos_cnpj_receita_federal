@@ -5,7 +5,10 @@ from datetime import datetime
 import locale
 
 # setar locale para português
-locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
+try:
+    locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
+except:
+    pass
 
 
 def create_folder(folder_path):
